@@ -1,17 +1,14 @@
-<div class="mx-auto h-screen flex flex-col">
-    <div class="px-8 bg-accents-0">
-      <main class="w-full max-w-3xl mx-auto py-16">
-        <h1 class="text-5xl font-bold tracking-tight mb-6">AB testing with Buckets</h1>
-        <p class="mb-4">In this demo we use cookies to assign a bucket with the variant to show. Visit one of the pages below and a bucket will be assigned to you.</p>
-        <ul class="pl-6 [&_li]:before:content-['-'] [&_li]:before:absolute [&_li]:before:text-accents-3 [&_li]:before:-ml-4">
-          <li>
-            <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-link hover:text-link-light transition-colors no-underline [&_code]:text-link [&_code]:hover:text-link-light [&_code]:transition-colors">/home</a>
-            <a routerLink="/marketing" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-link hover:text-link-light transition-colors no-underline [&_code]:text-link [&_code]:hover:text-link-light [&_code]:transition-colors">/marketing</a>
-          </li>
-        </ul>
-        <p class="text-base font-normal mt-4">If you see this text the <b>client flag</b> is enabled</p>
-        <p class="text-base font-normal mt-4">If you see this text the <b>server side</b> flag is enabled</p>
-      </main>
-    </div>
-  </div>
-  
+
+  <h1 class="text-5xl font-bold tracking-tight mb-6">A/B testing with Angular & <b class="mark">A/BBY</b></h1>
+  <p class="mb-4">In this demo we use cookies to assign a bucket with the variant to show. Visit one of the pages below and a bucket will be assigned to you.</p>
+  <ul class="pl-6 list-disc">
+    <li>
+      <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-link hover:decoration-pink-300 transition-colors no-underline">/home</a>
+    </li>
+    <li>
+        <a routerLink="/marketing" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-link hover:decoration-pink-300 transition-colors no-underline">/marketing</a>
+    </li>
+  </ul>
+  <p class="text-base font-normal mt-4">If you see this text the <b>client flag</b> is enabled</p>
+  <p class="text-base font-normal mt-4">If you see this text the <b>server side flag</b> is enabled</p>
+  <p class="text-base font-normal mt-4">If you see this the <a routerLink="/feature-route">/feature-route</a>, the <b>routing flag</b> is enabled</p>

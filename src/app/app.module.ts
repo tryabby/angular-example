@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MarketingComponent } from './marketing/marketing.component';
 import { MainComponent } from './main/main.component';
-// import { AbbyModule } from '@tryabby/angular'W
+import { RoutingComponent } from './routing/routing.component';
+// import { AbbyModule } from '@tryabby/angular'
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { MainComponent } from './main/main.component';
     AppComponent,
     HomeComponent,
     MarketingComponent,
-    MainComponent, 
+    MainComponent,
+    RoutingComponent, 
     // AbbyModule.forRoot(abby)
   ],
   imports: [
