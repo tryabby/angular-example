@@ -3,12 +3,18 @@
   <p class="mb-4">In this demo we use cookies to assign a bucket with the variant to show. Visit one of the pages below and a bucket will be assigned to you.</p>
   <ul class="pl-6 list-disc">
     <li>
-      <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-link hover:decoration-pink-300 transition-colors no-underline">/home</a>
+      <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" class="hover:text-pink-300 transition-colors no-underline">/home</a>
     </li>
     <li>
-        <a routerLink="/marketing" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-link hover:decoration-pink-300 transition-colors no-underline">/marketing</a>
+        <a routerLink="/marketing" routerLinkActive="active" ariaCurrentWhenActive="page" class="hover:text-pink-300 transition-colors no-underline">/marketing</a>
     </li>
   </ul>
-  <p class="text-base font-normal mt-4">If you see this text the <b>client flag</b> is enabled</p>
-  <p class="text-base font-normal mt-4">If you see this text the <b>server side flag</b> is enabled</p>
-  <p class="text-base font-normal mt-4">If you see this the <a routerLink="/feature-route">/feature-route</a>, the <b>routing flag</b> is enabled</p>
+  <div *featureFlag="'clientFlag'" class="text-base font-normal mt-4">If you see this text the <b>client flag</b> is enabled</div>
+  <div *featureFlag="'serverFlag'" class="text-base font-normal mt-4">If you see this text the <b>server side flag</b> is enabled</div>
+  <div class="flex flex-col items-center mb-10">
+    <a href="http://www.tryabby.com" class="mt-12 px-6 py-4 text-2xl font-semibold  no-underline transition-transform duration-150 ease-in-out hover:scale-110" [ngClass]="{'bg-gray-900 text-white rounded-xl hover:bg-gray-600': homeVariant == 'A', 'bg-slate-50 text-black roundex-xl hover:bg-black hover:text-white': homeVariant == 'B', 'bg-gray-900 text-white hover:bg-gray-600 hover:scale-x-150': homeVariant == 'C' }" (click)="this.abby.onAct('Home')">Try Abby</a>
+  </div>
+
+  <ng-container *featureFlag="'clientFlag'">
+    <div class="flex-col flex items-stretch"><img alt="Rick Astley - Never Gonna Give You Up" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTMzOTczMjA1YzAxNGJmMGY5YzI2MWFjODBhMWQ4NDhmOGNlM2NiZiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/Ju7l5y9osyymQ/giphy.gif"></div>
+  </ng-container>

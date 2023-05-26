@@ -5,8 +5,8 @@ import { MarketingComponent } from './marketing/marketing.component';
 import { MainComponent } from './main/main.component';
 import { RoutingComponent } from './routing/routing.component';
 
-const routes: Routes = [  { 
-  path: 'home', component: HomeComponent },
+const routes: Routes = [  
+  {path: 'home', component: HomeComponent },
   {path: 'marketing', component: MarketingComponent },
   {path: 'feature-route', component: RoutingComponent},
   {path: '', component: MainComponent}

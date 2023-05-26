@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, Injectable, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,8 +7,23 @@ import { HomeComponent } from './home/home.component';
 import { MarketingComponent } from './marketing/marketing.component';
 import { MainComponent } from './main/main.component';
 import { RoutingComponent } from './routing/routing.component';
-// import { AbbyModule } from '@tryabby/angular'
+import { AbbyModule } from '@tryabby/angular'
 
+
+const abby = {
+  projectId: "clg0i3xdc0000mfh7lg0mbvnf",
+  currentEnvironment: "default",
+  tests: {
+    Home: {
+      variants: ["A", "B", "C"],
+    },
+    Marketing: {
+      variants: ["b", "c", "original"],
+    },
+  },
+  flags: ["clientFlag", "serverFlag"],
+}
+  
 
 @NgModule({
   declarations: [
@@ -16,12 +31,12 @@ import { RoutingComponent } from './routing/routing.component';
     HomeComponent,
     MarketingComponent,
     MainComponent,
-    RoutingComponent, 
-    // AbbyModule.forRoot(abby)
+    RoutingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    AbbyModule.forRoot(abby)
   ],
   providers: [],
   bootstrap: [AppComponent]
