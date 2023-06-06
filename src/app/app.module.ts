@@ -34,7 +34,7 @@ const abby = {
     RoutingComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule, 
     AbbyModule.forRoot(abby)
   ],
